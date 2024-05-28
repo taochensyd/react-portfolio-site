@@ -1,38 +1,93 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+}
+
 .App {
-  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header, section, footer {
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+header h1, section h2 {
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.home-page, .education-page, .projects-page, .work-experience-page, .skills-page {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.work-experience-page .MuiCard-root,
+.education-page .MuiCard-root,
+.projects-page .MuiCard-root,
+.skills-page .MuiCard-root {
+  margin-bottom: 20px;
+}
+
+.skills-page .MuiPaper-root,
+.education-page .MuiPaper-root,
+.projects-page .MuiPaper-root,
+.work-experience-page .MuiPaper-root {
+  margin-bottom: 20px;
+}
+
+.skills-page .MuiChip-root,
+.education-page .MuiChip-root,
+.projects-page .MuiChip-root,
+.work-experience-page .MuiChip-root {
+  margin: 5px;
+}
+
+@media (max-width: 600px) {
+  .skills-page .MuiPaper-root,
+  .education-page .MuiPaper-root,
+  .projects-page .MuiPaper-root,
+  .work-experience-page .MuiPaper-root {
+    padding: 10px;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  .skills-page .MuiChip-root,
+  .education-page .MuiChip-root,
+  .projects-page .MuiChip-root,
+  .work-experience-page .MuiChip-root {
+    margin: 3px;
   }
 }
